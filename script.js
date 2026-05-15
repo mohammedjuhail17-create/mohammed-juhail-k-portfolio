@@ -150,6 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Form Submission Handling ---
     const form = document.getElementById('contactForm');
+    const successPopup = document.getElementById('successPopup');
+    const closePopupBtn = document.querySelector('.popup-close-btn');
+
     if(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -159,18 +162,46 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
             btn.style.opacity = '0.8';
             
-            // Simulate network request
-            setTimeout(() => {
-                btn.innerHTML = '<span>Sent Successfully!</span> <i class="fa-solid fa-check"></i>';
-                btn.style.background = '#27c93f';
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(() => {
+                // Show success popup
+                if(successPopup) {
+                    successPopup.classList.add('show');
+                }
+                
                 form.reset();
+                btn.innerHTML = originalText;
+                btn.style.opacity = '1';
+                
+            }).catch((err) => {
+                console.error('Error submitting form:', err);
+                btn.innerHTML = '<span>Error</span> <i class="fa-solid fa-xmark"></i>';
+                btn.style.background = '#ff4d4d';
                 
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.background = '';
                     btn.style.opacity = '1';
                 }, 3000);
-            }, 1500);
+            });
+        });
+    }
+
+    if(closePopupBtn && successPopup) {
+        closePopupBtn.addEventListener('click', () => {
+            successPopup.classList.remove('show');
+        });
+
+        // Close on clicking outside the box
+        successPopup.addEventListener('click', (e) => {
+            if (e.target === successPopup) {
+                successPopup.classList.remove('show');
+            }
         });
     }
 });
