@@ -1,15 +1,15 @@
 :root {
-    --bg-color: #faf9f6; /* Clean warm off-white */
-    --bg-color-alt: #f4f3ef; /* Slightly darker warm gray */
-    --text-color: #1a1a1a; /* Dark charcoal */
-    --text-muted: #5a5a5a; /* Muted gray */
-    --primary-color: #111111; /* Primary black */
-    --secondary-color: #333333; /* Secondary charcoal */
-    --accent-color: #8c7853; /* Refined brass/bronze accent */
+    --bg-color: #000000; /* Pure black to match profile photo background */
+    --bg-color-alt: #0a0a0a; /* Dark charcoal for alternating sections */
+    --text-color: #f0f0f0; /* Crisp off-white */
+    --text-muted: #9a9a9a; /* Muted gray */
+    --primary-color: #ffffff; /* Primary white */
+    --secondary-color: #dddddd; /* Secondary light gray */
+    --accent-color: #c5a880; /* Elegant gold/bronze accent that pops on black */
     
-    --card-bg: #ffffff; /* Clean white cards */
-    --card-border: rgba(0, 0, 0, 0.06);
-    --card-hover-border: rgba(0, 0, 0, 0.15);
+    --card-bg: #0d0d0d; /* Dark card background */
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-hover-border: rgba(255, 255, 255, 0.25);
     
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -151,7 +151,7 @@ ul {
 .btn-secondary {
     background: transparent;
     color: var(--text-color);
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-secondary:hover {
@@ -167,7 +167,7 @@ ul {
 }
 
 .btn-outline:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Navigation */
@@ -186,7 +186,7 @@ ul {
 
 .navbar.scrolled {
     padding: 15px 50px;
-    background: rgba(250, 249, 246, 0.9);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--card-border);
 }
@@ -529,7 +529,7 @@ ul {
     width: 70px;
     height: 70px;
     margin: 0 auto 20px;
-    background: rgba(0, 0, 0, 0.02);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -540,7 +540,7 @@ ul {
 }
 
 .skill-card:hover .skill-icon {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     color: var(--accent-color);
     transform: scale(1.05);
 }
@@ -560,7 +560,7 @@ ul {
 .progress-bar {
     width: 100%;
     height: 6px;
-    background: rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 3px;
     overflow: hidden;
 }
@@ -664,10 +664,10 @@ ul {
     font-size: 0.75rem;
     font-weight: 500;
     padding: 4px 10px;
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(255, 255, 255, 0.04);
     color: var(--text-color);
     border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -861,7 +861,7 @@ ul {
     padding: 15px 0;
     background: transparent;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     color: var(--text-color); /* Correct dark text color */
     font-size: 1rem;
     font-family: var(--font-body);
@@ -1016,7 +1016,7 @@ footer p {
         top: 100%;
         left: -100%;
         width: 100%;
-        background: rgba(250, 249, 246, 0.98);
+        background: rgba(10, 10, 10, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
@@ -1115,12 +1115,12 @@ footer p {
     height: 550px;
     max-width: calc(100vw - 60px);
     max-height: calc(100vh - 150px);
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(10, 10, 10, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--card-border);
     border-radius: 8px; /* Crisp corners matching portfolio cards */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -1215,7 +1215,7 @@ footer p {
 
 .chat-close-btn:hover {
     color: var(--primary-color);
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Chat Messages Area */
@@ -1237,11 +1237,11 @@ footer p {
     background: transparent;
 }
 .chat-messages::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 10px;
 }
 .chat-messages::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 /* Chat Bubbles */
@@ -1365,7 +1365,7 @@ footer p {
     overflow-x: auto;
     white-space: nowrap;
     border-top: 1px solid var(--card-border);
-    background: rgba(250, 249, 246, 0.9);
+    background: rgba(10, 10, 10, 0.9);
     flex-shrink: 0;
     scrollbar-width: none; /* Hide scrollbar for Firefox */
     -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
@@ -1394,7 +1394,7 @@ footer p {
 }
 
 .chat-suggestion-btn:hover {
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.04);
     border-color: var(--primary-color);
     color: var(--primary-color);
     transform: translateY(-1px);
