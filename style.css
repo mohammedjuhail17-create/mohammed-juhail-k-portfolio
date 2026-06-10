@@ -478,11 +478,11 @@ ul {
 .hero-portrait-wrapper {
     position: relative;
     width: 100%;
-    max-width: 420px;
-    aspect-ratio: 4 / 5;
+    max-width: 500px;
+    aspect-ratio: 1672 / 941; /* Matches native aspect ratio of the photo */
     overflow: hidden;
     border-radius: 4px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .hero-portrait-img {
