@@ -479,7 +479,7 @@ ul {
     position: relative;
     width: 100%;
     max-width: 500px;
-    aspect-ratio: 1672 / 941; /* Matches native aspect ratio of the photo */
+    aspect-ratio: 16 / 9; /* Matches native aspect ratio of the photo (1600x900) */
     overflow: hidden;
     border-radius: 4px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
