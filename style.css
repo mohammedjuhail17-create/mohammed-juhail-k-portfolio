@@ -487,16 +487,17 @@ ul {
 }
 
 .circle-bg {
+    display: none;
     position: absolute;
     width: 80%;
     height: 80%;
     border-radius: 50%;
-    background: radial-gradient(circle, #e63946 0%, #900d0d 100%); /* Elegant deep ruby red gradient */
+    background: none;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    box-shadow: 0 15px 45px rgba(230, 57, 70, 0.35), inset 0 2px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: none;
     transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -991,6 +992,38 @@ ul {
 
 .popup-close-btn {
     width: 100%;
+}
+
+/* Image Popup Modal Specifics */
+.avatar-popup-content {
+    max-width: 800px;
+    width: 90%;
+    padding: 15px;
+    position: relative;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+.popup-avatar-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.avatar-popup-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.avatar-popup-close:hover {
+    color: var(--accent-color);
 }
 
 /* Footer */

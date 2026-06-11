@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animateCursor();
 
         // Hover effect for links and buttons
-        const interactives = document.querySelectorAll('a, button, .skill-card, .project-card, .certificate-card, input, textarea');
+        const interactives = document.querySelectorAll('a, button, .skill-card, .project-card, .certificate-card, input, textarea, .hero-portrait-img');
         interactives.forEach(el => {
             el.addEventListener('mouseenter', () => cursorOutline.classList.add('hover'));
             el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hover'));
@@ -588,6 +588,30 @@ Guidelines for your responses:
             appendMessage('user', text);
             chatInput.value = '';
             handleBotReply(text);
+        });
+    }
+
+    // --- Profile Picture Modal Dialog ---
+    const heroPortrait = document.querySelector('.hero-portrait-img');
+    const avatarModal = document.getElementById('avatarModal');
+    const avatarCloseBtn = document.querySelector('.avatar-popup-close');
+
+    if (heroPortrait && avatarModal) {
+        heroPortrait.addEventListener('click', () => {
+            avatarModal.classList.add('show');
+        });
+    }
+
+    if (avatarCloseBtn && avatarModal) {
+        avatarCloseBtn.addEventListener('click', () => {
+            avatarModal.classList.remove('show');
+        });
+
+        // Close on clicking outside the image
+        avatarModal.addEventListener('click', (e) => {
+            if (e.target === avatarModal) {
+                avatarModal.classList.remove('show');
+            }
         });
     }
 
